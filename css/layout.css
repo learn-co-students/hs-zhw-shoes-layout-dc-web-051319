@@ -23,5 +23,28 @@
 }
 
 /* Positioning Classes */
-
+.col-wrapper {
+  display: table;
+  height: 100%;
+  position: relative;
+  margin-bottom: 1em;
+}
+.col-wrapper::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.col-wrapper > section {
+  display: table-cell;
+  height: 100%;
+  float: left;
+  margin-left: 2%;
+  width: 32%
+}
+.col-wrapper > section:first-child {
+  margin-left: 0;
+}
+.two-col-wrapper > section:first-child {
+  width: 66%
+}
 
